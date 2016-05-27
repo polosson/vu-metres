@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<title>VU-metres JQUERY</title>
+
+	<link href="vendor/bootstrap.min.css"	 rel="stylesheet" type="text/css" />
+	<link href="vu-metres.css"		 		 rel="stylesheet" type="text/css" />
+
+	<script src="vendor/jquery-2.2.0.min.js"></script>
+	<script src="jquery.vu-metres.js"></script>
+
+	<script>
+		$(function(){
+			$('.za').vumetre({
+				"speed": 500,
+				"withText": true,
+				"height": "300px"
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<section class="container-fluid">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h2>Vu-mètres JQUERY</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				<div class="row">
+					<div class="col-md-3"><div class="za" percent="40"></div></div>
+					<div class="col-md-3"><div class="za" percent="100"></div></div>
+					<div class="col-md-3"><div class="za" percent="70"></div></div>
+					<div class="col-md-3"><div class="za" percent="9"></div></div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<h3>How to use</h3>
+				<p>First, include CSS style and JS scripts (depends on Jquery)</p>
+<pre>
+< link href="vumetre.css" rel="stylesheet" type="text/css" />
+< script src="jquery-2.2.0.min.js">< /script>
+< script src="vumetre.js">         < /script></pre>
+				<p>Then, use it like this :</p>
+<pre>
+$(function(){
+    $('.yourDivs').vumetre({
+        "speed": 500,
+        "withText": true,
+        "height": "300px",
+        "width": "100%"
+    });
+});</pre>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
