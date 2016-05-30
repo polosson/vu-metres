@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<title>VU-metres JS</title>
+
+	<link href="vendor/bootstrap.min.css"	 rel="stylesheet" type="text/css" />
+	<link href="vu-metres.css"		 		 rel="stylesheet" type="text/css" />
+
+	<script src="vendor/jquery-2.2.0.min.js"></script>
+	<script src="jquery.vu-metres.js"></script>
+
+	<script>
+		$(function(){
+			$('.demo').vumetre({
+				"speed": 500,
+				"withText": true,
+				"height": "300px"
+			});
+		});
+	</script>
+	<style>
+		.noPad { padding: 0 3px 0 0 !important; margin: 0 !important; }
+		.vu-label { font-size: 1.1em; }
+	</style>
+</head>
+<body>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Vu-mètres Javascript</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Affichez des Vu-mètres entièrement CSS (sans image) grâce à Javascript</h4>
+				<ul>
+					<li>Créez des vu-mètres simples rapidement grâce à un <b>plugin JQuery</b> ou un <b>module Angular</b>.</li>
+					<li>Il suffit d'un élément block (div ou autre) avec <b>un attribut</b> ayant la valeur à afficher.</li>
+					<li>Vous pouvez définir <b>votre propre design</b> grâce à une feuille de style comprenant 3 classes CSS.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="row text-center">
+					<div class="col-md-1 noPad"><div class="demo" percent="25"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="8"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="66"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="32"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="87"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="74"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="47"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="35"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="95"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="22"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="32"></div></div>
+					<div class="col-md-1 noPad"><div class="demo" percent="55"></div></div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="row text-center">
+					<div class="col-md-6 well">
+						<a href="jquery.vu-metres.html">
+							<h3>Utilisant JQuery</h3>
+							<p>Voir la démo et un exemple d'utilisation</p>
+						</a>
+					</div>
+					<div class="col-md-6 well">
+						<a href="angular.vu-metres.html">
+							<h3>Utilisant AngularJS</h3>
+							<p>Voir la démo et un exemple d'utilisation</p>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p><b>Licence libre</b> <a href="https://tldrlegal.com/license/mit-license#fulltext">(MIT)</a>, allez sur GitHub pour <b>télécharger</b> l'ensemble !</p>
+						<p class="text-muted"><small>© Polosson 2016</small></p>
+						<p>
+							<a href="https://github.com">
+								<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" height="100" /><br />
+								Github.com
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

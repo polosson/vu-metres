@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<title>VU-metres ANGULAR</title>
+
+	<link href="vendor/bootstrap.min.css"	 rel="stylesheet" type="text/css" />
+	<link href="vu-metres.css"		 		 rel="stylesheet" type="text/css" />
+
+	<script src="vendor/jquery-2.2.0.min.js"></script>
+	<script src="vendor/angular-1.4.6.min.js"></script>
+	<script src="angular.vu-metres.js"></script>
+	<script>
+		var myapp = angular.module('myapp', ['vumetres']);
+	</script>
+</head>
+<body>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2><a href="index.html">Vu-mètres</a> ANGULAR</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<h3>Exemple</h3>
+				<div class="row text-center">
+					<div class="col-md-3">1 <vumetre percent="40"  speed="1000" /></div>
+					<div class="col-md-3">2 <vumetre percent="65"  speed="200" /></div>
+					<div class="col-md-3">3 <vumetre percent="100" randomize="true" /></div>
+					<div class="col-md-3">4 <vumetre percent="19"  speed="2000"  /></div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<h3>Comment l'utiliser</h3>
+				<p>Tout d'abord, incluez la feuille de style CSS et le script JS (dépend de la librairie AngularJS, et de la librairie jQuery si vous voulez l'animation)</p>
+<pre>
+&lt;link href="vumetre.css" rel="stylesheet" type="text/css" />
+&lt;script src="vendor/jquery-2.2.0.min.js"> &lt;/script>
+&lt;script src="vendor/angular-1.4.6.min.js">&lt;/script>
+&lt;script src="vumetre.js">                 &lt;/script></pre>
+				<p>Puis, injectez le module "vumetres" dans votre appli angular :</p>
+				<pre>var myapp = angular.module('myapp', ['vumetres']);</pre>
+				<p>Ensuite, créez autant de vu-mètre que vous voulez grâce au tag suivant :</p>
+<pre>&lt;vumetre="40" /></pre>
+				<p>Ou bien, avec toutes les options spécifiées :</p>
+<pre>&lt;vumetre="65" speed="500" with-text="true" height="300px" width="100%" randomize="false" /></pre>
+				<p>
+					L'option "randomize" vous permet de créer des valeurs aléatoires à intervalle régulier (défini par "speed")
+					<i>(voir l'exemple n°3 ci-contre à gauche, cliquez dessus)</i>.
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

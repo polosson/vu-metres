@@ -25,33 +25,35 @@
 
 </head>
 <body>
-	<section class="container-fluid">
-		<div class="row text-center">
+	<section class="container">
+		<div class="row">
 			<div class="col-md-12">
-				<h2>Vu-mètres JQUERY</h2>
+				<h2><a href="index.html">Vu-mètres</a> JQUERY</h2>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-md-2">
-				<div class="row">
-					<div class="col-md-3"><div class="za" percent="40"></div></div>
-					<div class="col-md-3"><div class="za" percent="100"></div></div>
-					<div class="col-md-3"><div class="za" percent="70"></div></div>
-					<div class="col-md-3"><div class="za" percent="9"></div></div>
+			<div class="col-md-3">
+				<h3>Exemple</h3>
+				<div class="row text-center">
+					<div class="col-md-3">1 <div class="za" percent="40"></div></div>
+					<div class="col-md-3">2 <div class="za" percent="100"></div></div>
+					<div class="col-md-3">3 <div class="za" percent="70"></div></div>
+					<div class="col-md-3">4 <div class="za" percent="9"></div></div>
 				</div>
 			</div>
-			<div class="col-md-8">
-				<h3>How to use</h3>
-				<p>First, include CSS style and JS scripts (depends on Jquery)</p>
+			<div class="col-md-9">
+				<h3>Comment l'utiliser</h3>
+				<p>Tout d'abord, incluez la feuille de style CSS et le script JS (dépend de la librairie JQuery seulement)</p>
 <pre>
-< link href="vumetre.css" rel="stylesheet" type="text/css" />
-< script src="jquery-2.2.0.min.js">< /script>
-< script src="vumetre.js">         < /script></pre>
-				<p>Then, use it like this :</p>
+&lt;link href="vumetre.css" rel="stylesheet" type="text/css" />
+&lt;script src="vendor/jquery-2.2.0.min.js">&lt;/script>
+&lt;script src="vumetre.js">&lt;/script></pre>
+				<p>Puis, créez vos éléments (de type block) et donnez leur une classe (ou un ID), ainsi que l'attribut "percent" contenant la valeur à afficher :</p>
+<pre>&lt;div class="yourvu" percent="40">&lt;/div></pre>
+				<p>Ensuite, il suffit de l'apeller (ici avec toutes les options par défaut, donc inutiles) :</p>
 <pre>
 $(function(){
-    $('.yourDivs').vumetre({
+    $('.yourvu').vumetre({
         "speed": 500,
         "withText": true,
         "height": "300px",
